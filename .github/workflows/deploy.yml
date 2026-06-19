@@ -27,6 +27,8 @@ jobs:
       - name: Install dependencies
         run: cd frontend && npm install
       - name: Build with Next.js
+        env:
+          NEXT_PUBLIC_CONTRACT_ADDRESS: ${{ vars.NEXT_PUBLIC_CONTRACT_ADDRESS }}
         run: cd frontend && npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
