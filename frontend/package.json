@@ -1,7 +1,7 @@
 {
-  "name": "genlayer-football-betting",
+  "name": "genlayer-prediction-market",
   "version": "1.0.0",
-  "description": "GenLayer Football Betting - AI-powered prediction betting on GenLayer blockchain.",
+  "description": "GenLayer AI Prediction Market - decentralized oracle betting on GenLayer.",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -22,6 +22,7 @@
     "@wagmi/core": "^2.22.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.40.0",
     "genlayer-js": "^1.1.8",
     "lucide-react": "^0.548.0",
     "next": "^16.0.0",
