@@ -17,7 +17,6 @@ export const GENLAYER_NETWORK = {
     decimals: 18,
   },
   rpcUrls: [process.env.NEXT_PUBLIC_GENLAYER_RPC_URL || "https://studio.genlayer.com/api"],
-  blockExplorerUrls: [],
 };
 
 // Ethereum provider type from window
@@ -178,7 +177,7 @@ export async function switchToGenLayerNetwork(): Promise<void> {
     });
   } catch (error: any) {
     // If the chain is not added, add it
-    if (error.code === 4902) {
+    if (error.code === 4902 || (error.message && error.message.includes("addEthereumChain"))) {
       await addGenLayerNetwork();
     } else if (error.code === 4001) {
       throw new Error("User rejected switching the network");
